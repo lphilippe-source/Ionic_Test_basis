@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      student
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+
+<ion-card *ngFor="let student of student">
+  <ion-card-header>
+    <ion-card-subtitle>Etudiant</ion-card-subtitle>
+    <ion-card-title>{{ student.name }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    commentaire: 
+  </ion-card-content>
+  <ion-card-title>{{ student.comment }}</ion-card-title>
+  <ion-card-content>
+    l'étudiant a-til terminé son projet:
+  </ion-card-content>
+  <ion-card-title>{{ student.isProjectDone?'oui':'non' }}</ion-card-title>
+  <ion-card-content>
+    note:
+  </ion-card-content>
+  <ion-card-title>{{ student.grade }}</ion-card-title>
+</ion-card>
+
+</div>
+</ion-content>
+
+ <!-- <ion-card *ngFor="let student of student">
+  <ion-item>
+    <ion-icon name="pin" slot="start"></ion-icon>
+    <ion-label>ion-item in a card, icon left, button right</ion-label>
+    <ion-button fill="outline" slot="end">View</ion-button>
+  </ion-item>
+
+  <ion-card-content>
+    This is content, without any paragraph or header tags,
+    within an ion-card-content element.
+  </ion-card-content>
+</ion-card> -->
